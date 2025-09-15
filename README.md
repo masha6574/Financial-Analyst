@@ -25,7 +25,7 @@ This application is deployed on Hugging Face Spaces. You can try it out live!
 
 The application is built on a decoupled frontend and backend architecture, following the flow illustrated below.
 
-![Application Architecture Flowchart](assets/flowchart.png)
+![Application Architecture Flowchart](assets/Flowchart.png)
 
 `User -> Streamlit UI -> FastAPI Backend -> RAG Agent -> ChromaDB / Live APIs -> Groq LLM`
 
