@@ -1,0 +1,28 @@
+# Ignore Git and IDE folders
+.git
+.vscode
+.idea
+
+# Ignore the virtual environment created by Poetry
+.venv
+venv
+
+# --- Crucial: Ignore local databases and data ---
+chroma_db/
+company_data.db
+data/
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore documentation and experimental notebooks
+README.md
+notebooks/
+
+# Ignore build/config files
+Dockerfile
+.dockerignore
+render.yaml

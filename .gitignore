@@ -1,0 +1,18 @@
+# Virtual environment
+.venv
+
+# Environment variables
+.env*
+
+# --- Crucial: Ignore local databases and data ---
+chroma_db/
+company_data.db
+data/
+nltk_data/ 
+
+# Python cache
+__pycache__/
+
+# IDE folders
+.vscode/
+.idea/

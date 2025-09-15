@@ -1,0 +1,31 @@
+[project]
+name = "financial-analyst-ai"
+version = "0.1.0"
+description = "An AI-powered financial analyst using a multi-source RAG architecture."
+authors = [
+    {name = "masha6574", email = "smadhavsharma513@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "langchain (>=0.3.27,<0.4.0)",
+    "langchain-community (>=0.3.29,<0.4.0)",
+    "langchain-core (>=0.3.76,<0.4.0)",
+    "ollama (>=0.5.3,<0.6.0)",
+    "chromadb (>=1.0.20,<2.0.0)",
+    "fastapi (>=0.116.1,<0.117.0)",
+    "uvicorn[standard] (>=0.35.0,<0.36.0)",
+    "streamlit (>=1.49.1,<2.0.0)",
+    "unstructured[pdf] (>=0.18.14,<0.19.0)", # <-- THIS LINE IS CHANGED
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "tavily-python (>=0.7.12,<0.8.0)",
+    "alpha-vantage (>=3.0.0,<4.0.0)",
+    "langchain-unstructured (>=0.1.6,<0.2.0)",
+    "sentence-transformers (>=5.1.0,<6.0.0)",
+    "langchain-huggingface (>=0.3.1,<0.4.0)",
+    "pymupdf (>=1.26.4,<2.0.0)",
+    "langchain-chroma (>=0.2.5,<0.3.0)",
+    "langchain-ollama (>=0.3.7,<0.4.0)",
+    "langchain-groq (>=0.3.8,<0.4.0)",
+    "pydantic (>=2.11.7,<3.0.0)"
+]

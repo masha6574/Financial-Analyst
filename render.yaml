@@ -1,0 +1,30 @@
+# render.yaml
+
+services:
+  # ---------------- Backend Service (FastAPI) ----------------
+  - type: web
+    name: financial-analyst-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - fromGroup: api-keys
+    disk:
+      name: chroma-db-disk
+      mountPath: /app/chroma_db
+      sizeGB: 1
+
+  # ---------------- Frontend Service (Streamlit) ----------------
+  - type: web
+    name: financial-analyst-frontend
+    runtime: python
+    buildCommand: "poetry install --no-dev"
+    startCommand: "poetry run streamlit run app.py --server.port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      # CHANGED: Manually construct the backend URL
+      - key: BACKEND_URL
+        value: https://financial-analyst-backend.onrender.com
